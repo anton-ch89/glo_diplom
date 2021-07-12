@@ -2,13 +2,26 @@
 
 import headerModal from './modules/headerModal.js';
 import servicesModal from './modules/servicesModal.js';
+import calc from './modules/calc.js';
+import countTimer from './modules/countTimer.js';
+import docs from './modules/docs.js';
+import sendForm from './modules/sendForm.js';
 import benefitsSlider from './modules/benefitsSlider.js';
 
 
-//модальное окно заказа звонка
+//Модальное окно заказа звонка
 headerModal();
 // Модальные окна Замер
 servicesModal();
+//Калькулятор
+calc();
+//Таймер
+countTimer();
+//Документы
+docs();
+// Отправка формы
+sendForm();
+
 
 //Слайдер-карусель "Выгоды"
 const carusel = new benefitsSlider({
