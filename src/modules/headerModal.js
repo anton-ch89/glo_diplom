@@ -1,6 +1,6 @@
 //модальное окно заказа звонка
 
-const toggleModalCall = () => {
+const headerModal = () => {
     const callButton = document.querySelector('.btn-block'),
         headerModal = document.querySelector('.header-modal--opened'),
         overlay = document.querySelector('.overlay'),
@@ -20,4 +20,4 @@ const toggleModalCall = () => {
 
 };
 
-export default toggleModalCall;
+export default headerModal;
