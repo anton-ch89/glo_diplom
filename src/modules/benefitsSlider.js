@@ -1,6 +1,6 @@
 //Слайдер-карусель "Выгоды"
 
-class benefitsSlider {
+class BenefitsSlider {
     constructor({
         main,
         wrap,
@@ -9,7 +9,7 @@ class benefitsSlider {
         infinity = false,
         position = 0,
         responsive = [],
-        slidesToShow = 4,
+        slidesToShow = 3,
     }) {
         if (!main || !wrap) {
             console.warn(`slider-carusel: Необходимо 2 свойства, "main" и "wrap"!`);
@@ -63,6 +63,8 @@ class benefitsSlider {
         style.textContent = `
             .glo-slider {
                 overflow: hidden !important;
+                max-width: 540px;
+                margin: 0 auto;
             }
             .glo-slider__wrap {
                 display: flex !important;
@@ -71,10 +73,8 @@ class benefitsSlider {
             }
             .glo-slider__item {
                 display: flex !important;
-                align-items: center;
-                justify-content: space-around;
                 flex: 0 0 ${this.options.widthSlide}% !important;
-                margin: auto 0 !important;
+                width: ${this.options.widthSlide}% !important;
                 flex-direction: column;
             }
             .glo-slider__next, 
@@ -95,6 +95,13 @@ class benefitsSlider {
             .glo-slider__next:focus {
                 background: transparent;
                 outline: transparent;
+            }
+            @media (max-width: 576px){
+                .glo-slider {
+                    overflow: hidden !important;
+                    max-width: 180px;
+                    margin: 0 auto;
+                }
             }
         }
         `;
@@ -165,4 +172,5 @@ class benefitsSlider {
     }
 }
 
-export default benefitsSlider;
+
+export default BenefitsSlider;
