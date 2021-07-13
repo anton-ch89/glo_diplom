@@ -17,7 +17,8 @@ servicesModal();
 //Калькулятор
 calc();
 //Таймер
-countTimer('15 august 2021 12:25:30');
+countTimer('15 august 2021 12:25:30', true);
+countTimer('15 august 2021 12:25:30', false);
 //Документы
 docs();
 // Отправка формы

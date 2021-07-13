@@ -1,10 +1,16 @@
 //Таймер
 
-const countTimer = (deadline) => {
-    let timerDays = document.querySelector('.count_1 > span'),
-        timerHours = document.querySelector('.count_2 > span'),
-        timerMinutes = document.querySelector('.count_3 > span'),
-        timerSeconds = document.querySelector('.count_4 > span');
+const countTimer = (deadline, count) => {
+    let timerDays = document.querySelector('.count_1>span'),
+        timerHours = document.querySelector('.count_2>span'),
+        timerMinutes = document.querySelector('.count_3>span'),
+        timerSeconds = document.querySelector('.count_4>span');
+        if(count){
+            timerDays = document.querySelectorAll('.count_1>span')[1];
+            timerHours = document.querySelectorAll('.count_2>span')[1];
+            timerMinutes = document.querySelectorAll('.count_3>span')[1];
+            timerSeconds = document.querySelectorAll('.count_4>span')[1];
+        }
 
     const getTimeRemaining = () => {
         let dateStop = new Date(deadline).getTime(),
