@@ -5,6 +5,7 @@ import servicesModal from './modules/servicesModal.js';
 import calc from './modules/calc.js';
 import countTimer from './modules/countTimer.js';
 import docs from './modules/docs.js';
+import smoothScroll from './modules/smoothScroll.js';
 import sendForm from './modules/sendForm.js';
 import benefitsSlider from './modules/benefitsSlider.js';
 
@@ -21,6 +22,8 @@ countTimer();
 docs();
 // Отправка формы
 sendForm();
+//Скролл
+smoothScroll();
 
 
 //Слайдер-карусель "Выгоды"
