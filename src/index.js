@@ -7,6 +7,7 @@ import countTimer from './modules/countTimer.js';
 import certificate from './modules/certificate.js';
 import smoothScroll from './modules/smoothScroll.js';
 import sendForm from './modules/sendForm.js';
+import validationForms from './modules/validationForms.js';
 import BenefitsSlider from './modules/benefitsSlider.js';
 
 
@@ -25,6 +26,9 @@ certificate();
 sendForm();
 //Скролл
 smoothScroll();
+//Валидация форм
+validationForms(document.querySelectorAll('.form-horizontal')[0]);
+validationForms(document.querySelectorAll('.form-horizontal')[1]);
 
 
 //Слайдер-карусель "Выгоды"
