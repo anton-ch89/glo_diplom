@@ -31,8 +31,9 @@ sendForm();
 //Скролл
 smoothScroll();
 //Валидация форм
-validationForms(document.querySelectorAll('.form-horizontal')[0]);
-validationForms(document.querySelectorAll('.form-horizontal')[1]);
+document.querySelectorAll('form').forEach(e => {
+	validationForms(e);
+});
 
 
 //Слайдер-карусель "Выгоды"

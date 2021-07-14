@@ -5,7 +5,7 @@ const sendForm = () => {
         loadMessage = 'Загрузка...',
         successMessage = 'Спасибо! Мы скоро с Вами свяжемся';
         
-    const forms = document.querySelectorAll('.form-horizontal'),
+    const forms = document.querySelectorAll('form'),
         text = document.querySelector('title').innerText;
     const postData = (body) => {
         return fetch('./server.php', {
