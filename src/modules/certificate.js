@@ -94,14 +94,13 @@ body {font-family: Arial, Helvetica, sans-serif;}
         `);
 
     const modal = document.querySelector('#myModal'),
-        modalImg = document.querySelector('#img01'),
-        span = document.querySelector('.close');
+        modalImg = document.querySelector('#img01');
 
     body.addEventListener('click', e => {
         docs.forEach(elem => {
-            e.preventDefault();
             let target = e.target;
             if (target.closest('.sertificate-document')) {
+                e.preventDefault();
                 modal.style.display = "block";
                 modalImg.src = './images/documents/original/document4.jpg';
             }
