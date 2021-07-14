@@ -4,8 +4,19 @@ const sendForm = () => {
     const errorMessage = 'Что-то пошло не так',
         loadMessage = 'Загрузка...',
         successMessage = 'Спасибо! Мы скоро с Вами свяжемся';
+        
+    const forms = document.querySelectorAll('.form-horizontal'),
+        text = document.querySelector('title').innerText;
+    const postData = (body) => {
+        return fetch('./server.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        });
+    };
 
-    const forms = document.querySelectorAll('.form-horizontal');
 
     const statusMessage = document.createElement('div');
     statusMessage.style.cssText = `font-size: 2rem;`;
@@ -20,6 +31,9 @@ const sendForm = () => {
             formData.forEach((val, key) => {
                 body[key] = val;
             });
+            if (text === 'Остекление балконов и лоджий' && document.getElementById('calc-total')){
+                body[`total`] = document.getElementById('calc-total').value;
+            }
     
             postData(body)
                 .then((response) => {
@@ -41,16 +55,6 @@ const sendForm = () => {
                 elem.reset();
         });
     });
-    
-    const postData = (body) => {
-        return fetch('./server.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(body)
-        });
-    };
 };
 
 export default sendForm;
