@@ -7,7 +7,7 @@ module.exports = {
         path: path.resolve(__dirname, './dist')
     },
     mode: 'development',
-    devSeerver: {
+    devServer: {
         open: true,
         port: 8080,
         hot: true,
@@ -16,7 +16,7 @@ module.exports = {
     module: {
         rules: [
           {
-            test: /\.m?js$/,
+            test: /\.js$/,
             exclude: /node_modules/,
             use: {
               loader: "babel-loader",

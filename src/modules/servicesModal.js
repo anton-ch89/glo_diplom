@@ -12,11 +12,12 @@ const servicesModal = () => {
             modal.style.display = 'block';
             overlay.style.display = 'block';
         }
-        if(target.closest('.services-modal__close')){
+        if(target.closest('.services-modal__close') || target.closest('.overlay')){
             event.preventDefault();
             modal.style.display = 'none';
             overlay.style.display = 'none';
         }
+        
 
        });
 

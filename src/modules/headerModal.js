@@ -17,6 +17,11 @@ const headerModal = () => {
         headerModal.style.display = 'none';
         overlay.style.display = 'none';
     });
+    overlay.addEventListener('click', (event) => {
+        event.preventDefault();
+        headerModal.style.display = 'none';
+        overlay.style.display = 'none';
+    });
 
 };
 

@@ -5,18 +5,22 @@ import servicesModal from './modules/servicesModal.js';
 import calc from './modules/calc.js';
 import countTimer from './modules/countTimer.js';
 import certificate from './modules/certificate.js';
+import servicesSlider from './modules/servicesSlider.js';
 import smoothScroll from './modules/smoothScroll.js';
 import sendForm from './modules/sendForm.js';
 import validationForms from './modules/validationForms.js';
 import BenefitsSlider from './modules/benefitsSlider.js';
 
 
+document.addEventListener('DOMContentLoaded', () => {
 //Модальное окно заказа звонка
 headerModal();
 // Модальные окна Замер
 servicesModal();
 //Калькулятор
 calc();
+//Слайдер "Замеры"
+servicesSlider();
 //Таймер
 countTimer('15 august 2021 12:25:30', true);
 countTimer('15 august 2021 12:25:30', false);
@@ -48,3 +52,5 @@ const carusel = new BenefitsSlider({
 });
 
 carusel.init();
+
+});
