@@ -53,7 +53,7 @@ class BenefitsSlider {
         }
     }
     addStyles() {
-        let style = document.querySelector('#sliderCarusel-style');
+        let style = document.querySelector('#benefitsCarusel-style');
         if(!style){
             style = document.createElement('style');
             style.id = 'sliderCarusel-style';
@@ -76,25 +76,6 @@ class BenefitsSlider {
                 flex: 0 0 ${this.options.widthSlide}% !important;
                 width: ${this.options.widthSlide}% !important;
                 flex-direction: column;
-            }
-            .glo-slider__next, 
-            .glo-slider__prev {
-                margin: 0 10px;
-                border: 20px solid transparent;
-                background: transparent;
-            }
-            .glo-slider__next {
-                border-left-color: #19b5fe;
-            }
-            .glo-slider__prev {
-                border-right-color: #19b5fe;
-            }
-            .glo-slider__prev:hover,
-            .glo-slider__next:hover,
-            .glo-slider__prev:focus,
-            .glo-slider__next:focus {
-                background: transparent;
-                outline: transparent;
             }
             @media (max-width: 576px){
                 .glo-slider {

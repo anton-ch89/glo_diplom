@@ -5,7 +5,7 @@ import servicesModal from './modules/servicesModal.js';
 import calc from './modules/calc.js';
 import countTimer from './modules/countTimer.js';
 import certificate from './modules/certificate.js';
-import servicesSlider from './modules/servicesSlider.js';
+import ServicesSlider from './modules/servicesSlider.js';
 import smoothScroll from './modules/smoothScroll.js';
 import sendForm from './modules/sendForm.js';
 import validationForms from './modules/validationForms.js';
@@ -19,8 +19,6 @@ headerModal();
 servicesModal();
 //Калькулятор
 calc();
-//Слайдер "Замеры"
-servicesSlider();
 //Таймер
 countTimer('15 august 2021 12:25:30', true);
 countTimer('15 august 2021 12:25:30', false);
@@ -53,5 +51,23 @@ const carusel = new BenefitsSlider({
 });
 
 carusel.init();
+
+
+const services = new ServicesSlider({
+	main: '.services-inner',
+	wrap: '.services-wrap',
+    prev: '.services__arrow--left',
+    next: '.services__arrow--right',
+	slidesToShow: 2,
+	infinity: true,
+	responsive: [
+		{
+		breakpoint: 576,
+		slidesToShow: 1,
+	},
+	],
+});
+
+services.init();
 
 });
