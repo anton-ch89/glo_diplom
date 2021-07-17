@@ -1554,7 +1554,8 @@ input.error {
   z-index: 9999;
 }
 
-.header-modal__close {
+.header-modal__close,
+.order-modal__close {
   position: absolute;
   top: 5px;
   right: 5px;
@@ -1663,6 +1664,14 @@ input.error {
   right: 25px;
   bottom: 25px;
   transform: rotate(90deg);
+}
+
+.offer-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 @media (min-width: 576px) {
