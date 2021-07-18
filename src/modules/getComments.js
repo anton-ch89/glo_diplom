@@ -39,7 +39,7 @@ const getComments = ()=> {
                 } 
                 else if (item.id === 1 || item.id === 4) {div.innerHTML = `
                 <div class="col-xs-9 col-sm-9">
-                    <div class="review-inner review-grey review-arrow review-arrow-right">
+                    <div class="review-inner review-gray review-arrow review-arrow-right">
                         <p class="text-normal">${item.author}</p>
                         <p>${item.comment}</p>
                     </div>
