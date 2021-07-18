@@ -8,6 +8,7 @@ import certificate from './modules/certificate.js';
 import ServicesSlider from './modules/servicesSlider.js';
 import smoothScroll from './modules/smoothScroll.js';
 import sendForm from './modules/sendForm.js';
+import getComments from './modules/getComments.js';
 import offerModal from './modules/offerModal.js';
 import validationForms from './modules/validationForms.js';
 import BenefitsSlider from './modules/benefitsSlider.js';
@@ -25,6 +26,8 @@ countTimer('15 august 2021 12:25:30', true);
 countTimer('15 august 2021 12:25:30', false);
 //Документы
 certificate();
+//Комментарии
+getComments();
 // Модальное окно Скидка
 offerModal();
 // Отправка формы
