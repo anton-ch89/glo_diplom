@@ -22,7 +22,7 @@ const getComments = ()=> {
                 div.classList.add('row');
                 div.classList.add('comment-item');
                 div.classList.add('review-margin-bottom');
-                if(item.id === 0){
+                if(item.id === 0 || item.id === 3){
                     div.innerHTML = `
                     <div class="col-xs-3 col-sm-2">
                         <div class="review-user">
@@ -37,6 +37,19 @@ const getComments = ()=> {
                     </div>
                     `;
                 } 
+                else if (item.id === 1 || item.id === 4) {div.innerHTML = `
+                <div class="col-xs-9 col-sm-9">
+                    <div class="review-inner review-grey review-arrow review-arrow-right">
+                        <p class="text-normal">${item.author}</p>
+                        <p>${item.comment}</p>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-2">
+                    <div class="review-user">
+                        <img src="images/users/${item.image ? item.image : 'unnamed.png'}" alt="" class="img-responsive avatar">
+                    </div>
+                </div>
+                `;}
                 else {div.innerHTML = `
                 <div class="col-xs-3 col-sm-2">
                     <div class="review-user">
@@ -49,14 +62,16 @@ const getComments = ()=> {
                         <p>${item.comment}</p>
                     </div>
                 </div>
-                `;}
+                `;
+            } 
                 elems.push(div);
             });
             for (let i = 0; i < 3; i++) {
                 reviews.querySelector('.comments-container').append(elems[i]);
-                if (i === 2) {
-                    elems[i].querySelector('.review-inner').classList.add('review-orange');
+                if (i === 0) {
+                    elems[i].querySelector('.review-inner');
                 } 
+               
             }
             let i = 3;
             setInterval(() => {
