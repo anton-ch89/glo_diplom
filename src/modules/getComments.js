@@ -83,7 +83,7 @@ const getComments = ()=> {
                 reviews.querySelector('.comments-container').append(elems[i]);
 
                 i++;
-            }, 10000);
+            }, 20000);
         });
 };
 
